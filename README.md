@@ -18,13 +18,13 @@
 ## Run
 Install the driver for your database and
 ```
-git commit https://github.com/zhazhazha69/buy-sell-schedule
+git commit https://github.com/zhazhazha69/buy-sell-schedule/tree/v1
 pip install -r requirements.txt 
 python app.py 
 ``` 
 OR 
 ```
-git commit https://github.com/zhazhazha69/buy-sell-schedule
+git commit https://github.com/zhazhazha69/buy-sell-schedule/tree/v1
 pip3 install -r requirements.txt
 python3 app.py
 ```
