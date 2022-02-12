@@ -3,8 +3,8 @@
 ![Screenshot](https://github.com/zhazhazha69/buy-sell-schedule/blob/v2/Screenshot.jpg?raw=true)
 
 ## Setup
-1. On line 23, configure the database connection settings
-2. On lines 296, 297, 395, specify in the queries the actual data of your database
+1. On line 22, configure the database connection settings
+2. On lines 295, 296, 394, specify in the queries the actual data of your database
 3. Forward to battle!
 
 ## Requirements
