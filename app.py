@@ -106,7 +106,7 @@ app.index_string = '''
             }
             #graph_1th_scatter, #graph_5th_scatter, 
             #graph_10th_scatter, #graph_20th_scatter,
-            #graph_30th_scatter, #graph_long_bar {
+            #graph_30th_scatter, #graph_long_scatter {
               margin: 0 auto;
               margin-top: 20px;
             }
