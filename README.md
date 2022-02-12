@@ -4,7 +4,7 @@
 
 ## Setup
 1. On line 23, configure the database connection settings
-2. On lines 240, 241, 339, specify in the queries the actual data of your database
+2. On lines 296, 297, 395, specify in the queries the actual data of your database
 3. Forward to battle!
 
 ## Requirements
