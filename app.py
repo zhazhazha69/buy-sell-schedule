@@ -41,82 +41,138 @@ app.index_string = '''
         {%config%}
         {%scripts%}
         <style>
-            body {
-              margin: 0;
-              padding: 0;
-              background-color: #202020;
-            }
+            body {margin: 0; padding: 0; background-color: #202020;}
+            
             .header {
-              padding: 30px 0px; 
-              margin: 0px 0px 30px;
-              background-color: #FFCC29;
-              text-align: center;
-            }
+              padding: 30px 0px; margin: 0px 0px 30px;
+              background-color: #FFCC29; text-align: center;}
+            
             h1 {
-              color: #393E46;
-              font-size: 50px;
-              font-family: 'Montserrat', sans-serif;
-              margin: 0;
-            }
+              color: #393E46; font-size: 50px;
+              font-family: 'Montserrat', sans-serif; margin: 0;}
+            
             button {
-              font-size: 40px;
-              width: 400px;
-              height: 100px;
-              color: #f1e658;
+              font-size: 40px; color: #f1e658;
               font-family: 'Montserrat', sans-serif;
-              user-select: none;
-              border-radius: 60px;
+              width: 400px; height: 100px;
+              border-radius: 60px; border-width: 0px;
               background: #181818;
               box-shadow:  46px 46px 92px #121212,
                  -46px -46px 92px #2e2e2e;
-              border-width: 0px;       
-              transition: 0.4s;
-            }
-            button:hover {
-              transform: scale(1.06);
-              transition: 0.4s;
-            }
+              user-select: none; transition: 0.4s;}
+            
+            button:hover {transform: scale(1.06); transition: 0.4s;}
+
             #DivGraph_30th_long .svg-container {
-              border-radius: 15px;
-              background: #181818;
               box-shadow:  9px 9px 18px #0a0a0a,
                 -9px -9px 18px #262626;
-              display: inline-flex;
-              border-style: solid;
-              border-width: 4px;
-              border-color: #181818;
-              transition: 0.4s;
-            }
-
-            .svg-container:hover {
-              transform: scale(1.06);
-              transition: 0.4s;
-            }
+              border-style: solid; border-width: 4px; border-color: #181818; border-radius: 15px;
+              display: inline-flex; transition: 0.4s;}
+            
+            .svg-container:hover {transform: scale(1.06); transition: 0.4s;}
+            
             #GraphDiv_1th, #GraphDiv_5th,
             #GraphDiv_10th, #GraphDiv_20th,
-            #GraphDiv_30th, #GraphDiv_long {
-              display: inline-grid;
-              width: 290px;
-            }
+            #GraphDiv_30th, #GraphDiv_long {display: inline-grid; width: 290px;}
+
             #graph_1th, #graph_1th_scatter, #graph_5th, #graph_5th_scatter,
             #graph_10th, #graph_10th_scatter, #graph_20th, #graph_20th_scatter,
             #graph_30th, #graph_30th_scatter, #graph_long, #graph_long_scatter {
-              width: 270px;
-              height: 300px;
-            }
+              width: 270px; height: 300px;}
+            
             #graph_1th_scatter, #graph_5th_scatter, 
             #graph_10th_scatter, #graph_20th_scatter,
             #graph_30th_scatter, #graph_long_scatter {
-              margin: 0 auto;
-              margin-top: 20px;
+              margin: 0 auto; margin-top: 20px;}
+            
+            @media (min-width: 1000px) {
+              #GraphDiv_1th, #GraphDiv_5th,
+              #GraphDiv_10th, #GraphDiv_20th,
+              #GraphDiv_30th, #GraphDiv_long {width: 162px;}
+
+              #graph_1th, #graph_5th,
+              #graph_10th, #graph_20th,
+              #graph_30th, #graph_long {width: 150px; height: 200px;}
+
+              #graph_1th_scatter, #graph_5th_scatter, #graph_10th_scatter, 
+              #graph_20th_scatter, #graph_30th_scatter, #graph_long_scatter {
+                width: 150px; height: 300px;}
+              
+              #DivGraph_30th_long {margin-left: calc(calc(100% - 972px)/ 2);}
             }
-            @media (min-width: 1177px) {
-              #DivGraph_30th_long {margin-left: calc(calc(100% - 1160px)/ 2);}
+            @media (min-width: 1100px) {
+              #GraphDiv_1th, #GraphDiv_5th,
+              #GraphDiv_10th, #GraphDiv_20th,
+              #GraphDiv_30th, #GraphDiv_long {width: 180px;}
+
+              #graph_1th, #graph_5th,
+              #graph_10th, #graph_20th,
+              #graph_30th, #graph_long {width: 156px; height: 210px;}
+
+              #graph_1th_scatter, #graph_5th_scatter, #graph_10th_scatter, 
+              #graph_20th_scatter, #graph_30th_scatter, #graph_long_scatter {
+                width: 156px; height: 300px;}
+              
+              #DivGraph_30th_long {margin-left: calc(calc(100% - 1080px)/ 2);}
             }
-            @media (min-width: 1470px) {
-              #DivGraph_30th_long {margin-left: calc(calc(100% - 1454px)/ 2);}
+            @media (min-width: 1200px) {
+              #GraphDiv_1th, #GraphDiv_5th,
+              #GraphDiv_10th, #GraphDiv_20th,
+              #GraphDiv_30th, #GraphDiv_long {width: 195px;}
+
+              #graph_1th, #graph_5th,
+              #graph_10th, #graph_20th,
+              #graph_30th, #graph_long {width: 178px; height: 230px;}
+
+              #graph_1th_scatter, #graph_5th_scatter, #graph_10th_scatter, 
+              #graph_20th_scatter, #graph_30th_scatter, #graph_long_scatter {
+                width: 178px; height: 300px;}
+              
+              #DivGraph_30th_long {margin-left: calc(calc(100% - 1170px)/ 2);}
+            }
+            @media (min-width: 1400px) {
+              #GraphDiv_1th, #GraphDiv_5th,
+              #GraphDiv_10th, #GraphDiv_20th,
+              #GraphDiv_30th, #GraphDiv_long {width: 230px;}
+              
+              #graph_1th, #graph_5th,
+              #graph_10th, #graph_20th,
+              #graph_30th, #graph_long {width: 212px; height: 255px;}
+
+              #graph_1th_scatter, #graph_5th_scatter, #graph_10th_scatter, 
+              #graph_20th_scatter, #graph_30th_scatter, #graph_long_scatter {
+                width: 212px; height: 300px;}
+              
+              #DivGraph_30th_long {margin-left: calc(calc(100% - 1390px)/ 2);}
+            }
+            @media (min-width: 1600px) {
+              #GraphDiv_1th, #GraphDiv_5th,
+              #GraphDiv_10th, #GraphDiv_20th,
+              #GraphDiv_30th, #GraphDiv_long {width: 260px;}
+              #graph_1th, #graph_5th,
+              #graph_10th, #graph_20th,
+              #graph_30th, #graph_long {width: 250px; height: 280px;}
+
+              #graph_1th_scatter, #graph_5th_scatter, #graph_10th_scatter, 
+              #graph_20th_scatter, #graph_30th_scatter, #graph_long_scatter {
+                width: 250px; height: 300px;}
+              
+              #DivGraph_30th_long {margin-left: calc(calc(100% - 1560px)/ 2);}
             }
             @media (min-width: 1760px) {
+              #GraphDiv_1th, #GraphDiv_5th,
+              #GraphDiv_10th, #GraphDiv_20th,
+              #GraphDiv_30th, #GraphDiv_long {width: 290px;}
+
+              #graph_1th, #graph_1th_scatter, #graph_5th, #graph_5th_scatter,
+              #graph_10th, #graph_10th_scatter, #graph_20th, #graph_20th_scatter,
+              #graph_30th, #graph_30th_scatter, #graph_long, #graph_long_scatter {
+                width: 270px; height: 300px;}
+              #graph_1th_scatter, #graph_5th_scatter, 
+              #graph_10th_scatter, #graph_20th_scatter,
+              #graph_30th_scatter, #graph_long_scatter {
+                margin: 0 auto; margin-top: 20px;}
+              
               #DivGraph_30th_long {margin-left: calc(calc(100% - 1740px)/ 2);}
             }
         </style>
@@ -131,49 +187,49 @@ app.index_string = '''
 '''
 
 app.layout = html.Div(children=[
-    html.Div(className="header", children=[
-        html.H1(children="Synchronization - None trend", id="sync"),
+    html.Div(className = "header", children = [
+        html.H1(children = "Synchronization - None trend", id = "sync"),
         ]),
 
     html.Div(children=[
         html.Div(children=[
             dcc.Graph(
-            id='graph_1th', style={'margin': '0 auto'}),
+            id = 'graph_1th', style = {'margin': '0 auto'}),
             dcc.Graph(
-            id='graph_1th_scatter', style={'margin-top': '20px'})
-            ], id='GraphDiv_1th'),
+            id = 'graph_1th_scatter', style = {'margin-top': '20px'})
+            ], id = 'GraphDiv_1th'),
         html.Div(children=[
             dcc.Graph(
-            id='graph_5th', style={'margin': '0 auto'}),
+            id = 'graph_5th', style = {'margin': '0 auto'}),
             dcc.Graph(
-            id='graph_5th_scatter', style={'margin-top': '20px'})
-            ], id='GraphDiv_5th'),
+            id = 'graph_5th_scatter', style = {'margin-top': '20px'})
+            ], id = 'GraphDiv_5th'),
         html.Div(children=[
             dcc.Graph(
-            id='graph_10th', style={'margin': '0 auto'}),
+            id = 'graph_10th', style = {'margin': '0 auto'}),
             dcc.Graph(
-            id='graph_10th_scatter', style={'margin-top': '20px'})
-            ], id='GraphDiv_10th'),
+            id = 'graph_10th_scatter', style = {'margin-top': '20px'})
+            ], id = 'GraphDiv_10th'),
         html.Div(children=[
             dcc.Graph(
-            id='graph_20th', style={'margin': '0 auto'}),
+            id = 'graph_20th', style = {'margin': '0 auto'}),
             dcc.Graph(
-            id='graph_20th_scatter', style={'margin-top': '20px'})
-            ], id='GraphDiv_20th'),
+            id = 'graph_20th_scatter', style = {'margin-top': '20px'})
+            ], id = 'GraphDiv_20th'),
         html.Div(children=[
             dcc.Graph(
-            id='graph_30th', style={'margin': '0 auto'}),
+            id = 'graph_30th', style = {'margin': '0 auto'}),
             dcc.Graph(
-            id='graph_30th_scatter', style={'margin-top': '20px'})
-            ], id='GraphDiv_30th'),
+            id = 'graph_30th_scatter', style = {'margin-top': '20px'})
+            ], id = 'GraphDiv_30th'),
         html.Div(children=[
             dcc.Graph(
-            id='graph_long', style={'margin': '0 auto'}),
+            id = 'graph_long', style = {'margin': '0 auto'}),
             dcc.Graph(
-            id='graph_long_scatter', style={'margin-top': '20px'})
-            ], id='GraphDiv_long'),
+            id = 'graph_long_scatter', style = {'margin-top': '20px'})
+            ], id = 'GraphDiv_long'),
 
-        ], id='DivGraph_30th_long', style={"display": "none"}),
+        ], id = 'DivGraph_30th_long', style = {"display": "none"}),
 
     html.Div(
         html.Button(children='Start', id='show_btn'),
@@ -269,35 +325,35 @@ def change_text(n_clicks, n_intervals):
         }
         bgcolor = '#181818'; graph_colorway = ['#007965', '#FF0000']; graph_title_color = "#f1e658"
         
-        fig_long = go.Figure(data=[go.Pie(labels=labels, values=values_long, hole=0.3)])
-        fig_long_scatter = make_subplots(1, 1, specs=[[{"type": "scatter"}]])
-        fig_long_scatter.add_trace(go.Scatter(x=x_line_long, y=y_line_long_true, name=labels[0]), 1, 1)
-        fig_long_scatter.add_trace(go.Scatter(x=x_line_long, y=y_line_long_false, name=labels[1]), 1, 1)
+        fig_long = go.Figure(data = [go.Pie(labels = labels, values = values_long, hole = 0.3)])
+        fig_long_scatter = make_subplots(1, 1, specs = [[{"type": "scatter"}]])
+        fig_long_scatter.add_trace(go.Scatter(x = x_line_long, y = y_line_long_true, name = labels[0]), 1, 1)
+        fig_long_scatter.add_trace(go.Scatter(x = x_line_long, y = y_line_long_false, name = labels[1]), 1, 1)
 
-        fig_30th = go.Figure(data=[go.Pie(labels=labels, values=values_30th, hole=0.3)])
-        fig_30th_scatter = make_subplots(1, 1, specs=[[{"type": "scatter"}]])
-        fig_30th_scatter.add_trace(go.Scatter(x=x_line_30th, y=y_line_30th_true, name=labels[0]), 1, 1)
-        fig_30th_scatter.add_trace(go.Scatter(x=x_line_30th, y=y_line_30th_false, name=labels[1]), 1, 1)
+        fig_30th = go.Figure(data = [go.Pie(labels = labels, values = values_30th, hole = 0.3)])
+        fig_30th_scatter = make_subplots(1, 1, specs = [[{"type": "scatter"}]])
+        fig_30th_scatter.add_trace(go.Scatter(x = x_line_30th, y = y_line_30th_true, name = labels[0]), 1, 1)
+        fig_30th_scatter.add_trace(go.Scatter(x = x_line_30th, y = y_line_30th_false, name = labels[1]), 1, 1)
 
-        fig_20th = go.Figure(data=[go.Pie(labels=labels, values=values_20th, hole=0.3)])
-        fig_20th_scatter = make_subplots(1, 1, specs=[[{"type": "scatter"}]])
-        fig_20th_scatter.add_trace(go.Scatter(x=x_line_20th, y=y_line_20th_true, name=labels[0]), 1, 1)
-        fig_20th_scatter.add_trace(go.Scatter(x=x_line_20th, y=y_line_20th_false, name=labels[1]), 1, 1)
+        fig_20th = go.Figure(data = [go.Pie(labels = labels, values = values_20th, hole = 0.3)])
+        fig_20th_scatter = make_subplots(1, 1, specs = [[{"type": "scatter"}]])
+        fig_20th_scatter.add_trace(go.Scatter(x = x_line_20th, y = y_line_20th_true, name = labels[0]), 1, 1)
+        fig_20th_scatter.add_trace(go.Scatter(x = x_line_20th, y = y_line_20th_false, name = labels[1]), 1, 1)
 
-        fig_10th = go.Figure(data=[go.Pie(labels=labels, values=values_10th, hole=0.3)])
-        fig_10th_scatter = make_subplots(1, 1, specs=[[{"type": "scatter"}]])
-        fig_10th_scatter.add_trace(go.Scatter(x=x_line_10th, y=y_line_10th_true, name=labels[0]), 1, 1)
-        fig_10th_scatter.add_trace(go.Scatter(x=x_line_10th, y=y_line_10th_false, name=labels[1]), 1, 1)
+        fig_10th = go.Figure(data = [go.Pie(labels = labels, values = values_10th, hole = 0.3)])
+        fig_10th_scatter = make_subplots(1, 1, specs = [[{"type": "scatter"}]])
+        fig_10th_scatter.add_trace(go.Scatter(x = x_line_10th, y = y_line_10th_true, name = labels[0]), 1, 1)
+        fig_10th_scatter.add_trace(go.Scatter(x = x_line_10th, y = y_line_10th_false, name = labels[1]), 1, 1)
 
-        fig_5th = go.Figure(data=[go.Pie(labels=labels, values=values_5th, hole=0.3)])
-        fig_5th_scatter = make_subplots(1, 1, specs=[[{"type": "scatter"}]])
-        fig_5th_scatter.add_trace(go.Scatter(x=x_line_5th, y=y_line_5th_true, name=labels[0]), 1, 1)
-        fig_5th_scatter.add_trace(go.Scatter(x=x_line_5th, y=y_line_5th_false, name=labels[1]), 1, 1)
+        fig_5th = go.Figure(data = [go.Pie(labels = labels, values = values_5th, hole = 0.3)])
+        fig_5th_scatter = make_subplots(1, 1, specs = [[{"type": "scatter"}]])
+        fig_5th_scatter.add_trace(go.Scatter(x = x_line_5th, y = y_line_5th_true, name = labels[0]), 1, 1)
+        fig_5th_scatter.add_trace(go.Scatter(x = x_line_5th, y = y_line_5th_false, name = labels[1]), 1, 1)
         
-        fig_1th = go.Figure(data=[go.Pie(labels=labels, values=values_1th, hole=0.3)])
-        fig_1th_scatter = make_subplots(1, 1, specs=[[{"type": "scatter"}]])
-        fig_1th_scatter.add_trace(go.Scatter(x=x_line_1th, y=y_line_1th_true, name=labels[0]), 1, 1)
-        fig_1th_scatter.add_trace(go.Scatter(x=x_line_1th, y=y_line_1th_false, name=labels[1]), 1, 1)
+        fig_1th = go.Figure(data = [go.Pie(labels = labels, values = values_1th, hole = 0.3)])
+        fig_1th_scatter = make_subplots(1, 1, specs = [[{"type": "scatter"}]])
+        fig_1th_scatter.add_trace(go.Scatter(x = x_line_1th, y = y_line_1th_true, name = labels[0]), 1, 1)
+        fig_1th_scatter.add_trace(go.Scatter(x = x_line_1th, y = y_line_1th_false, name = labels[1]), 1, 1)
         fig_long.update_layout(
             title = "Overall volume", title_font_color = graph_title_color, title_font_family = 'Montserrat', title_font_size = 22, margin = graph_margin, paper_bgcolor = bgcolor, colorway = graph_colorway, font = {"color": graph_title_color}, showlegend = False
             )
