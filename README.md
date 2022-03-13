@@ -6,4 +6,7 @@
 ## [Version 2](https://github.com/zhazhazha69/buy-sell-schedule/tree/v2)
 ![Screenshot](https://github.com/zhazhazha69/buy-sell-schedule/blob/v2/Screenshot.jpg?raw=true)
 
+## [Version 3](https://github.com/zhazhazha69/buy-sell-schedule/tree/v3)
+![Screenshot](https://github.com/zhazhazha69/buy-sell-schedule/blob/v3/Screenshot.jpg?raw=true)
+
 ###### Made with ♥️
